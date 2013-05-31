@@ -5,7 +5,7 @@
  * @author  Jack coleman
  * @created 2010-06-15
  * @updated 2013-04-08
- * @link    http://verticalscroller.blogspot.in/
+ * @link    http://verticalscroller.blogspot.com/
  */
 
 (function($){
