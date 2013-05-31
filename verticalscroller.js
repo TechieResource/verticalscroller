@@ -2,14 +2,14 @@
  * Vertical Scroller
  * @version 1.0
  * @license GNU Lesser General Public License, http://www.gnu.org/copyleft/lesser.html
- * @author  Jack coleman
+ * @author  Jack Coleman
  * @created 2010-06-15
  * @updated 2013-04-08
- * @link    http://verticalscroller.blogspot.com/
+ * @link    http://verticalscroller.blogspot.in/
  */
-
+ 
 (function($){
-  $.fn.verticalscroller = function(options) {
+	$.fn.verticalscroller = function(options) {
 	
 	var defaults = {
 		direction: 'up',
@@ -130,18 +130,15 @@
 		return height;
 	}
 	
+//$(document).ready( function () {});
+ 
 	// Hack to check window status
 	function onBlur(){ vBody.attr('data-focus', 0); };
 	function onFocus(){ vBody.attr('data-focus', 1); };
-	
-	if (/*@cc_on!@*/false) { // check for Internet Explorer
-		document.onfocusin = onFocus;
-		document.onfocusout = onBlur;
-	}else{
-		$(window).bind('focus mouseover', onFocus);
-		$(window).bind('blur', onBlur);
-	}
-
+	document.onfocusin = onFocus;
+	document.onfocusout = onBlur;
+	$(window).bind('focus mouseover', onFocus);
+	$(window).bind('blur', onBlur);
 	return this.each(function(){
 		var obj = $(this);
 		var tar = obj.children(':first-child');
