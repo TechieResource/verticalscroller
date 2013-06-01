@@ -132,13 +132,10 @@
 	
 //$(document).ready( function () {});
  
-	// Hack to check window status
-	function onBlur(){ vBody.attr('data-focus', 0); };
-	function onFocus(){ vBody.attr('data-focus', 1); };
-	document.onfocusin = onFocus;
-	document.onfocusout = onBlur;
-	$(window).bind('focus mouseover', onFocus);
-	$(window).bind('blur', onBlur);
+$(document).ready(function() {
+	vBody.attr('data-focus',1);
+		
+	});
 	return this.each(function(){
 		var obj = $(this);
 		var tar = obj.children(':first-child');
